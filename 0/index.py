@@ -1,6 +1,7 @@
 #-*- coding:utf-8 -*-
 from bae.core import const
 from flask import Flask, g, request
+import os
 import sys
 
 # sys.path.insert(0, const.APP_DIR)
