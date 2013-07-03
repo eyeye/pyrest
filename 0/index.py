@@ -21,10 +21,11 @@ api = Api(app)
 # def hello():
 #     return "Hello, world! - Flask\n"
 
-
-class TodoSimple(Resource):
+class HelloWorld(restful.Resource):
     def get(self):
-        return {"Hello": "World!"}
+        return {'hello': 'world'}
+
+api.add_resource(HelloWorld, '/')
 
 
 api.add_resource(TodoSimple, '/<string:todo_id>')
