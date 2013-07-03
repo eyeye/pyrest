@@ -3,7 +3,7 @@ from bae.core import const
 from flask import Flask, g, request
 import sys
 
-sys.path.insert(0, const.APP_DIR+"/0/flask_restful")
+sys.path.insert(0, const.APP_DIR+"/flask_restful")
 
 from flask_restful import Resource, Api
 
