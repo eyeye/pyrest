@@ -23,7 +23,7 @@ api = Api(app)
 
 class HelloWorld(Resource):
     def get(self):
-        return {'hello': 'EYE BAE'}
+        return {'hello': const.APP_DIR}
 
 api.add_resource(HelloWorld, '/')
 
