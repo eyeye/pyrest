@@ -1,5 +1,5 @@
 #-*- coding:utf-8 -*-
-
+from bae.core import const
 from flask import Flask, g, request
 import sys
 
