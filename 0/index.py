@@ -2,7 +2,8 @@
 
 from flask import Flask, g, request
 import sys
-    sys.path.insert(0, APP_DIR/flask_restful)
+
+sys.path.insert(0, APP_DIR/flask_restful)
 
 from flask_restful import Resource, Api
 
@@ -25,3 +26,4 @@ api.add_resource(TodoSimple, '/<string:todo_id>')
 
 from bae.core.wsgi import WSGIApplication
 application = WSGIApplication(app)
+
