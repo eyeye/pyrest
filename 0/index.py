@@ -8,7 +8,7 @@ import sys
 
 path = os.path.dirname(os.path.abspath(__file__)) + '/flask_restful'
 if path not in sys.path:
-  sys.path.insert(1, path)
+	sys.path.insert(1, path)
 
 from flask_restful import Resource, Api
 
