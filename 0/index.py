@@ -21,7 +21,7 @@ api = Api(app)
 # def hello():
 #     return "Hello, world! - Flask\n"
 
-class HelloWorld(restful.Resource):
+class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
 
