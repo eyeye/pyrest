@@ -4,7 +4,7 @@ def app(environ, start_response):
     status = '200 OK'
     headers = [('Content-type', 'text/html')]
     start_response(status, headers)
-    body=["Welcome to EYE Cloud! TEST PUSH\n"]
+    body=["Welcome to EYE Cloud! TEST PUSH TEST Pycharm\n"]
     return body
 
 from bae.core.wsgi import WSGIApplication
