@@ -27,9 +27,6 @@ class HelloWorld(Resource):
 
 api.add_resource(HelloWorld, '/')
 
-
-api.add_resource(TodoSimple, '/<string:todo_id>')
-
 from bae.core.wsgi import WSGIApplication
 application = WSGIApplication(app)
 
