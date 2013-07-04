@@ -39,7 +39,7 @@ api.add_resource(HelloEYE, '/eye')
 
 class HelloWorld(Resource):
     def get(self):
-        return {'hello': 'EYE', 'APP_DIR': 'HAHA'}
+        return {'hello': 'EYE', 'path': path}
 
 api.add_resource(HelloWorld, '/')
 
