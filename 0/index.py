@@ -1,32 +1,62 @@
 #-*- coding:utf-8 -*-
-from bae.core import const
-from flask import Flask, g, request
+
 import os
 import sys
+
+
+if 'SERVER_SOFTWARE' in os.environ:
+    from bae.core import const
+else:
+    pass
+
+
+
+from flask import Flask, g, request
 
 # sys.path.insert(0, const.APP_DIR)
 
 path = os.path.dirname(os.path.abspath(__file__)) + '/flask_restful'
 if path not in sys.path:
-	sys.path.insert(1, path)
+    sys.path.insert(1, path)
 
 from flask_restful import Resource, Api
 
+
 app = Flask(__name__)
 app.debug = True
-
 api = Api(app)
 
-# @app.route('/')
-# def hello():
-#     return "Hello, world! - Flask\n"
+
+#############################################################
+
+
+class HelloEYE(Resource):
+    def get(self):
+        return {'hello': 'YangZhiyong'}
+
+api.add_resource(HelloEYE, '/eye')
+
 
 class HelloWorld(Resource):
     def get(self):
-        return {'hello': 'EYE', 'APP_DIR': const.APP_DIR}
+        return {'hello': 'EYE', 'APP_DIR': 'HAHA'}
 
 api.add_resource(HelloWorld, '/')
 
-from bae.core.wsgi import WSGIApplication
-application = WSGIApplication(app)
+
+class HelloWho(Resource):
+    def get(self, who):
+        return {'hello': who}
+
+api.add_resource(HelloWho, '/<string:who>')
+
+
+#############################################################
+
+if 'SERVER_SOFTWARE' in os.environ:
+    from bae.core.wsgi import WSGIApplication
+    application = WSGIApplication(app)
+else:
+    if __name__ == '__main__':
+        app.run(debug=True)
 
