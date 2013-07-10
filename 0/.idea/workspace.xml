@@ -44,13 +44,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="545" selection-end="545" vertical-scroll-proportion="0.22241682">
+            <state line="23" column="18" selection-start="435" selection-end="448" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/flask_pymongo/session.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="42" selection-start="329" selection-end="329" vertical-scroll-proportion="0.26344085">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,9 +101,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-46" />
-    <option name="y" value="62" />
-    <option name="width" value="1484" />
+    <option name="x" value="25" />
+    <option name="y" value="35" />
+    <option name="width" value="1244" />
     <option name="height" value="973" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -385,14 +394,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-46" y="62" width="1484" height="973" extended-state="0" />
+    <frame x="25" y="35" width="1244" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20974576" sideWeight="0.7889023" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21892655" sideWeight="0.7422935" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26360545" sideWeight="0.7422935" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3699137" sideWeight="0.42090395" order="9" side_tool="true" content_ui="tabs" />
@@ -469,15 +478,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#23#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flask_restful/utils/crypto.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="29" selection-start="43" selection-end="43" vertical-scroll-proportion="0.041015625" />
@@ -557,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="545" selection-end="545" vertical-scroll-proportion="0.22241682">
+        <state line="23" column="18" selection-start="435" selection-end="448" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
@@ -567,6 +567,13 @@
     <entry file="file://D:/PycharmProjects/Tester/tester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_pymongo/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="42" selection-start="329" selection-end="329" vertical-scroll-proportion="0.26344085">
           <folding />
         </state>
       </provider>
