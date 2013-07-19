@@ -139,7 +139,7 @@ class RSA_Test(Resource):
         # print key.exportKey('PEM')
 
         # print '========== pubkey ==================='
-        pubkey = key.publickey()
+        # pubkey = key.publickey()
         # print pubkey.exportKey('PEM')
 
         return {"KEY": key.exportKey('PEM')}
