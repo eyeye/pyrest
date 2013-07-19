@@ -142,7 +142,8 @@ class RSA_Test(Resource):
         # pubkey = key.publickey()
         # print pubkey.exportKey('PEM')
 
-        return {"KEY": key.exportKey('PEM')}
+        # return {"KEY": key.exportKey('PEM')}
+        return 'rsatest'
 
 api.add_resource(RSA_Test, '/rsatest')
 
