@@ -146,6 +146,16 @@ class RSA_Test(Resource):
 
 api.add_resource(RSA_Test, '/rsatest')
 
+
+
+class UserManager(Resource):
+    pass
+
+api.add_resource(UserManager, '/user')
+
+
+
+
 #############################################################
 
 if 'SERVER_SOFTWARE' in os.environ:
