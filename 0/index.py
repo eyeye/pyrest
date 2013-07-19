@@ -6,9 +6,9 @@ from Crypto.PublicKey import RSA
 import json
 
 if 'SERVER_SOFTWARE' in os.environ:
-    from bae.core import const
+    from config_duapp import DB_Database
 else:
-    pass
+    from config_localhost import DB_Database
 
 
 
@@ -21,7 +21,7 @@ if path not in sys.path:
     sys.path.insert(1, path)
 
 from flask_restful import Resource, Api, reqparse, abort
-from flask_pymongo import PyMongo
+# from flask_pymongo import PyMongo
 from bson import json_util
 
 app = Flask(__name__)
@@ -31,17 +31,17 @@ api = Api(app)
 
 ################## Mongo ###########################################
 
-if 'SERVER_SOFTWARE' in os.environ:
-    app.config['MONGO_HOST'] = const.MONGO_HOST
-    app.config['MONGO_PORT'] = const.MONGO_PORT
-    app.config['MONGO_DBNAME'] = 'GeEBBeqAoMglOIEuqZaD'
-else:
-    app.config['MONGO_HOST'] = '127.0.0.1'
-    app.config['MONGO_PORT'] = 27017
-    app.config['MONGO_DBNAME'] = 'local'
+# if 'SERVER_SOFTWARE' in os.environ:
+#     app.config['MONGO_HOST'] = const.MONGO_HOST
+#     app.config['MONGO_PORT'] = const.MONGO_PORT
+#     app.config['MONGO_DBNAME'] = 'GeEBBeqAoMglOIEuqZaD'
+# else:
+#     app.config['MONGO_HOST'] = '127.0.0.1'
+#     app.config['MONGO_PORT'] = 27017
+#     app.config['MONGO_DBNAME'] = 'local'
 
 # app.config['MONGO_DBNAME'] = 'local'
-mongo = PyMongo(app, config_prefix='MONGO')
+# mongo = PyMongo(app, config_prefix='MONGO')
 
 #############################################################
 
@@ -55,7 +55,7 @@ api.add_resource(HelloEYE, '/eye')
 
 class HelloWorld(Resource):
     def get(self):
-        return {'hello': 'EYE', 'path': path, 'APP_DIR': const.APP_DIR}
+        return {'hello': 'EYE', 'path': path, 'APP_DIR': 'NONE'}
 
 api.add_resource(HelloWorld, '/')
 
@@ -112,11 +112,11 @@ class DBTest(Resource):
     def get(self):
 
         print 'findone'
-        todo = mongo.db.todos.find_one()
+        todo = DB_Database.todos.find_one()
         print json_util.dumps(todo)
 
         print 'find'
-        list = mongo.db.todos.find()
+        list = DB_Database.todos.find()
         # print json_util.dumps(list)
         return json_util.dumps(list, default=json_util.default)
         # print json_util.dumps({'a': 'b', 'c': 'd'})
