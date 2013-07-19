@@ -133,7 +133,7 @@ class RSA_Test(Resource):
     def get(self):
         # print 'RSA_Test put'
 
-        key = RSA.generate(1024)
+        # key = RSA.generate(1024)
         # '========== pubkey ==================='
         # print key
         # print key.exportKey('PEM')
