@@ -127,7 +127,7 @@ class DBTest(Resource):
 
 api.add_resource(DBTest, '/mongotest')
 
-
+from Crypto.Hash import SHA256
 
 class RSA_Test(Resource):
     def get(self):
@@ -143,7 +143,12 @@ class RSA_Test(Resource):
         # print pubkey.exportKey('PEM')
 
         # return {"KEY": key.exportKey('PEM')}
-        return 'rsatest'
+        # return 'rsatest'
+        
+        hash = SHA256.new()
+        hash.update('message')
+        return hash.digest()
+      
 
 api.add_resource(RSA_Test, '/rsatest')
 
