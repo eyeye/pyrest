@@ -21,8 +21,9 @@ if path not in sys.path:
     sys.path.insert(1, path)
 
 from flask_restful import Resource, Api, reqparse, abort
-# from flask_pymongo import PyMongo
 from bson import json_util
+
+
 
 app = Flask(__name__)
 app.debug = True
@@ -81,6 +82,7 @@ def abort_no_exist(todo_id):
     if todo_id not in Todos:
         abort(404, message="Todo {} doesn't exist".format(todo_id))
 
+
 class Todo(Resource):
     def get(self, todo_id):
         abort_no_exist(todo_id)
@@ -98,7 +100,6 @@ class Todo(Resource):
         return '', 204
 
 api.add_resource(Todo, '/<string:todo_id>')
-
 
 
 class TodoList(Resource):
@@ -129,11 +130,12 @@ api.add_resource(DBTest, '/mongotest')
 
 from Crypto.Hash import SHA256
 
+
 class RSA_Test(Resource):
     def get(self):
         # print 'RSA_Test put'
 
-        # key = RSA.generate(1024)
+        key = RSA.generate(1024)
         # '========== pubkey ==================='
         # print key
         # print key.exportKey('PEM')
@@ -142,24 +144,30 @@ class RSA_Test(Resource):
         # pubkey = key.publickey()
         # print pubkey.exportKey('PEM')
 
-        # return {"KEY": key.exportKey('PEM')}
+        return {"KEY": key.exportKey('PEM')}
         # return 'rsatest'
         
-        hash = SHA256.new()
-        hash.update('message')
-        return hash.digest()
+        # hash = SHA256.new()
+        # hash.update('message')
+        # return hash.digest()
       
 
 api.add_resource(RSA_Test, '/rsatest')
 
 
+#
+# class UserManager(Resource):
+#     pass
+#
+# api.add_resource(UserManager, '/user')
 
-class UserManager(Resource):
-    pass
-
-api.add_resource(UserManager, '/user')
+from user import user
 
 
+api.add_resource(user.User, '/user')
+
+print 'Startup...........................'
+print RSA.__name__
 
 
 #############################################################
